@@ -48,10 +48,9 @@ h5{
 .date{
     border:1px solid #ecf0f1;
 }
-#btnCalculate{
-    position: relative;
-}
-#total-hours{
+#totalHours{
     padding-left: 5%;
+    border:1px solid #ecf0f1;
+    color: black;
 }
 
