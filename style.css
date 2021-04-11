@@ -1,0 +1,57 @@
+body{
+    background-color: rgba(194, 228, 219, 0.829);
+} 
+header{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    margin: auto;
+    margin-top: 1%;
+    width: 50%;
+    background-color: rgba(148, 151, 149, 0.781);
+    padding: 2%;
+    text-align: center;
+    border: hidden;
+}
+form{
+    padding-top: 2%;
+    padding-bottom: 20%;
+    padding-left: 1%;
+    margin: auto;
+    width: 50%;
+    background-color: white;
+    
+}
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+input{
+    appearance: none;
+    -webkit-appearance: none;
+    color: #95a5a6;
+    border:1px solid #a2a7a8;
+    font-family: "Helvetica", arial, sans-serif;
+    font-size: 18px;
+    background:#ecf0f1;
+    padding:5px;
+    display: inline-block !important;
+    visibility: visible !important;
+}
+h5{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 2%;
+}
+.formFields{
+    padding-left: 20%;
+    display: inline;
+    padding-left: 1%;
+}
+
+.date{
+    border:1px solid #ecf0f1;
+}
+#btnCalculate{
+    position: relative;
+}
+#total-hours{
+    padding-left: 5%;
+}
+

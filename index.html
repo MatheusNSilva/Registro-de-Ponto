@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Matheus Nunes Silva</title>
+    <meta charset="utf-8">
+    <script type="text/Javascript" src="service.js"></script>
+    <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Matheus Nunes Silva</h1>
+    </header>
+   
+    <form>
+        <div>
+            <h3 >Registro de Ponto</h3>
+            <div class="formFields" >
+                <p>Horário de Entrada*</p>
+                <input type="date" id="initialDate" class="date" required>
+                <input type="text" id="initialTime" required>
+                <p>Horário de Saída*</p>
+                <input type="date" id="finalDate" class="date" required>
+                <input type="text" id="finalTime" required>
+            </div>            
+            <input type="submit" onclick="calculateHourWorked()" value="Calcular" id="btnCalculate" class="btn btn-secondary">
+            <h5>Horas de Trabalho:</h5>
+            <p id="totalHours">Teste</p>
+        </div>
+    </form>
+</body>
+</html>
