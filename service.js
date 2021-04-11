@@ -1,10 +1,10 @@
-var diff;
-var hours, minutes;
-var startDate, endDate;
 var initialHour, finalHour;
 var initialDate, finalDate;
 
 function calculateHourWorked() {
+    var diff;
+    var hours, minutes;
+    var startDate, endDate;
     getInputs();
     
     initialDate = initialDate.split("-");
@@ -12,6 +12,7 @@ function calculateHourWorked() {
     dateValidation(initialDate, finalDate);
     initialHour = initialHour.split(":");
     finalHour = finalHour.split(":");
+    dateHourValidation(initialDate, finalDate, initialHour, lastHour);
 
     if (initialDate[2] == finalDate[2]) {
         startDate = new Date(0, 0, 0, initialHour[0], initialHour[1], 0);
@@ -33,23 +34,31 @@ function getInputs() {
     initialDate = document.getElementById("initialDate").value;
     finalHour   = document.getElementById("finalTime").value;
     finalDate   = document.getElementById("finalDate").value;
-    fieldsValidation();
-    
+    fieldsValidation();    
 }
 
 function dateValidation(firstDate, lastDate) {
-    if (lastDate < firstDate) {
-        alert("Data de saída não pode ser maior que a de entrada!");
+    if (lastDate[2] < firstDate[2]) {
+        alert("Data de entrada não pode ser maior que a de saída!");
+        resetFields();
     }
 }
 
-function fieldsValidation() {
-    
+function fieldsValidation() {    
     if (initialHour === "" || finalHour === "") {
         alert("Os campos de Horas devem ser preenchidos!");
+        resetFields();
     }
     else if (initialDate === "" || finalDate === "") {
         alert("As datas de entrada e saída devem ser selecionadas!");
-    }
-    
+        resetFields();
+    }    
+}
+
+function resetFields() {
+    document.getElementById("initialTime").value = "";
+    document.getElementById("initialDate").value = "";
+    document.getElementById("finalTime").value = "";
+    document.getElementById("finalDate").value = "";
+    document.getElementById("totalHours").value = "";
 }
