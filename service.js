@@ -24,6 +24,7 @@ function calculateHourWorked() {
     diff -= hours * 1000 * 60 * 60;
     var minutes = Math.floor(diff / 1000 / 60);
     document.getElementById("totalHours").value = hours + ":" + minutes;
+    event.preventDefault();
 }
 
 function getInputs() {
